@@ -1,4 +1,5 @@
 import 'package:check_in_lifesup_app/utils/colors.dart';
+import 'package:check_in_lifesup_app/utils/fonts.dart';
 import 'package:flutter/material.dart';
 
 class PassTextField extends StatelessWidget {
@@ -8,23 +9,19 @@ class PassTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         alignment: Alignment.centerLeft,
-        height: 50,
-        width: 350,
-        decoration: BoxDecoration(
+        height: 51,
+        width: 325,
+        decoration: const BoxDecoration(
           color: Colors.white,
-          border: Border.all(
-              color: ColorsApp.THEMECOLORSSECOND,
-              width: 2
-          ),
-          borderRadius: const BorderRadius.all(Radius.circular(11),
+          borderRadius: BorderRadius.all(Radius.circular(22),
           ),
         ),
         child: Padding(
-          padding:const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10),
           child: TextField(
             decoration: InputDecoration.collapsed(
-                hintText: "Password",
-                hintStyle: TextStyle(color : ColorsApp.THEMECOLORS)),
+                hintText: "Confirm Password",
+                hintStyle: Fonts.H3),
           ),
         )
     );

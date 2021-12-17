@@ -1,4 +1,7 @@
+import 'package:check_in_lifesup_app/bindings/home_bindings.dart';
 import 'package:check_in_lifesup_app/bindings/inital_bindings.dart';
+import 'package:check_in_lifesup_app/bindings/login_bindings.dart';
+import 'package:check_in_lifesup_app/pages/home/home.dart';
 import 'package:check_in_lifesup_app/pages/inital_page/init_page.dart';
 import 'package:check_in_lifesup_app/pages/login/login.dart';
 import 'package:check_in_lifesup_app/routes/routes.dart';
@@ -15,6 +18,12 @@ class Pages {
     GetPage(
       name: Routes.LOGIN_PAGE,
       page: () => const LoginPage(),
+      binding: LoginBindings(),
+    ),
+    GetPage(
+      name: Routes.HOME,
+      page: () => const Home(),
+      binding: HomeBindings(),
     ),
   ];
 }
